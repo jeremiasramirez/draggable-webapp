@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dragApp';
+
+  public europe : any[] = []
+  public latin : any[] = []
+  public asia : any[] = []
+
+
+  constructor(){
+    this.setLatin();
+
+
+  }
+
+  setEurope(){}
+  setLatin(){
+    let latin :any[]= ["Colombia", "Argentina", "Uruguay", "Paraguay", "Honduras", "El salvador"]
+    this.latin.push(latin)
+  }
+  setAsia(){}
+
+
 }
