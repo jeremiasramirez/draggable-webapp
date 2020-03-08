@@ -9,6 +9,7 @@ import{ DragDropModule } from "@angular/cdk/drag-drop"
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     DragDropModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
