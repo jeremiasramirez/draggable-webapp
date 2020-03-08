@@ -6,21 +6,38 @@
 <br>
 <br>
 <h1 class="center blue">Arrastra al lado correcto.</h1>
+
+<br>
+<br>
 <!-- cards app -->
-<div class="responsive">
-
-  <mat-card role="list" class="min center">
-      <mat-card-title>Europe</mat-card-title>
-      <mat-list>
-        <mat-list-item  role="listitem" *ngFor="let eur of europe">{{eur}}</mat-list-item>
-      </mat-list>
-  </mat-card>
+<div class="containerAll">
 
 
-  <mat-card role="list" class="min center">
-      <mat-card-title>Latin</mat-card-title>
-      <mat-list>
-        <mat-list-item  role="listitem" *ngFor="let lat of latin">{{lat}}</mat-list-item>
-      </mat-list>
-  </mat-card>
+  <div class="container">
+    <h1>Europe</h1>
+
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="europe"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div  class="alert--info cdk-drop-list-dragging" *ngFor="let eur of europe" cdkDrag>{{eur}}</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Latin</h1>
+
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="latin"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="alert--info cdk-drop-list-dragging" *ngFor="let lat of latin" cdkDrag>{{lat}}</div>
+    </div>
+  </div>
 </div>
