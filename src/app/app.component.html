@@ -3,23 +3,24 @@
   <span>Drag app</span>
 </mat-toolbar>
 
-
+<br>
+<br>
+<h1 class="center blue">Arrastra al lado correcto.</h1>
 <!-- cards app -->
+<div class="responsive">
 
-<!-- europe -->
-<mat-card>
-  <mat-card-title>Europe</mat-card-title>
-  <mat-list role="list">
-    <mat-list-item role="listitem">Item 1</mat-list-item>
-    <mat-list-item role="listitem">Item 2</mat-list-item>
-    <mat-list-item role="listitem">Item 3</mat-list-item>
-  </mat-list>
-</mat-card>
+  <mat-card role="list" class="min center">
+      <mat-card-title>Europe</mat-card-title>
+      <mat-list>
+        <mat-list-item  role="listitem" *ngFor="let eur of europe">{{eur}}</mat-list-item>
+      </mat-list>
+  </mat-card>
 
 
-
-<!-- latin -->
-<!-- <mat-card>
-<mat-card-title>Latin</mat-card-title>
-
-</mat-card> -->
+  <mat-card role="list" class="min center">
+      <mat-card-title>Latin</mat-card-title>
+      <mat-list>
+        <mat-list-item  role="listitem" *ngFor="let lat of latin">{{lat}}</mat-list-item>
+      </mat-list>
+  </mat-card>
+</div>

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import{ DragDropModule } from "@angular/cdk/drag-drop"
 
 // angular material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    DragDropModule,
     MatCardModule,
     MatListModule
   ],

@@ -1,0 +1,16 @@
+.min{
+  width: 300px;
+
+  margin: 1em;
+}
+.center{
+  text-align: center;
+}
+.responsive{
+  display: flex;
+  justify-content: center;
+
+}
+.blue{
+  color:purple;
+}
