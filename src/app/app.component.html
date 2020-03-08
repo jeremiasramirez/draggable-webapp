@@ -20,9 +20,9 @@
 
     <div
       cdkDropList
-      #todoList="cdkDropList"
+      #eur="cdkDropList"
       [cdkDropListData]="europe"
-      [cdkDropListConnectedTo]="[doneList]"
+      [cdkDropListConnectedTo]="[lats]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
       <div  class="alert--info cdk-drop-list-dragging" *ngFor="let eur of europe" cdkDrag>{{eur}}</div>
@@ -34,9 +34,9 @@
 
     <div
       cdkDropList
-      #doneList="cdkDropList"
+      #lats="cdkDropList"
       [cdkDropListData]="latin"
-      [cdkDropListConnectedTo]="[todoList]"
+      [cdkDropListConnectedTo]="[eur]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
       <div class="alert--info cdk-drop-list-dragging" *ngFor="let lat of latin" cdkDrag>{{lat}}</div>
